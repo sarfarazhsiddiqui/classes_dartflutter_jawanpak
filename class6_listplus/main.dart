@@ -32,4 +32,13 @@ void main() {
   print(students);
   students.removeLast();
   print(students);
+
+  // map
+
+  Map stud1 = {"RollNo": "RN001", "name": "sarfaraz", "Grade": "7"};
+  print(stud1);
+  //print(stud1);
+  print(stud1.keys);
+  print(stud1.values);
+  print(stud1.isEmpty);
 }
