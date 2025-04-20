@@ -14,4 +14,22 @@ void main() {
   print(students);
   print(students.isEmpty);
   print(students.isNotEmpty);
+  students.add("Hadi");
+  print(students);
+  students.addAll(["Abdul", "Kamran"]);
+  print(students);
+  students.insert(1, "kamal");
+  print(students);
+  students.insertAll(2, ["khurram", "farooq"]);
+  print(students);
+  var reversedStudents = students.reversed;
+  print(reversedStudents);
+  var reversedStudents1 = List.of(students.reversed);
+  print(reversedStudents1);
+  students.remove("Hadi");
+  print(students);
+  students.removeAt(2);
+  print(students);
+  students.removeLast();
+  print(students);
 }
