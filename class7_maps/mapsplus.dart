@@ -46,4 +46,21 @@ void main() {
   nobleGases[2] = 'phosphorus';
   print(nobleGases);
   print((nobleGases.length == 3));
+
+  // final constantValue = {"pi": "3.472"};
+  // constantValue.addAll("key":"value");
+
+  //putifABsent
+
+// spread operator
+  Map newSpreadOpr = {...stud1, ...books};
+  print(newSpreadOpr);
+
+// cascade opertor
+
+  Map newCascadeOpr = {}
+    ..addAll(books)
+    ..addAll(stud1)
+    ..remove("name");
+  print(newCascadeOpr);
 }
