@@ -37,8 +37,9 @@ void main() {
 
   Map stud1 = {"RollNo": "RN001", "name": "sarfaraz", "Grade": "7"};
   print(stud1);
-  //print(stud1);
+  //print(stud1[RollNo]);
   print(stud1.keys);
   print(stud1.values);
   print(stud1.isEmpty);
+  print(stud1.length);
 }
