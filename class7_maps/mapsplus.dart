@@ -44,7 +44,7 @@ void main() {
   nobleGases[0] = 'helium';
   nobleGases[1] = 'mehtane';
   nobleGases[2] = 'phosphorus';
-  print(nobleGases);dc
+  print(nobleGases);
   print((nobleGases.length == 3));
 
   // final constantValue = {"pi": "3.472"};
