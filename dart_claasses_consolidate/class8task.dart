@@ -31,31 +31,51 @@ void main() {
   //   isLogin = false;
   // }
 
-  String? userId = stdin.readLineSync();
-  String? userPassw = stdin.readLineSync();
-  bool isLogin = false;
+  // String? userId = stdin.readLineSync();
+  // String? userPassw = stdin.readLineSync();
+  // bool isLogin = false;
+  // do {
+  //   if (userId == 'abc' && userPassw == 'abc') {
+  //     isLogin = true;
+  //   } else {
+  //     print('try again');
+  //     String? userId = stdin.readLineSync();
+  //     String? userPassw = stdin.readLineSync();
+  //     isLogin = false;
+  //   }
+  // } while (isLogin == true);
+  // print('login succuessfule');
+  // // while (isLogin == true && (userId == 'abc' && userPassw == 'abc')) {
+  // //   // userId = 'abc';
+  // //   // userPassw = 'abc';
+  // //   print('Login Successful');
+  // //   isLogin = true;
+  // // }
+
+  // // print('successful');
+
+  // // islogin=HttpHeaders.generalHeadersi
+  // // if
+  // // islogin=true
+  // // while(islogin)
+
+  int attemps = 0, maxAttemps = 3;
   do {
-    if (userId == 'abc' && userPassw == 'abc') {
-      isLogin = true;
+    print('email :');
+    var email = stdin.readLineSync();
+    print('password :');
+    var password = stdin.readLineSync();
+    if (email == 'abc' && password == '123') {
+      print("Login successfull............");
+      break;
     } else {
-      print('try again');
-      String? userId = stdin.readLineSync();
-      String? userPassw = stdin.readLineSync();
-      isLogin = false;
+      attemps++;
+      if (attemps == maxAttemps) {
+        print("your account has been suspended.............");
+      } else {
+        print("Invalid email or password.............");
+        print("please try again.............");
+      }
     }
-  } while (isLogin == true);
-  print('login succuessfule');
-  // while (isLogin == true && (userId == 'abc' && userPassw == 'abc')) {
-  //   // userId = 'abc';
-  //   // userPassw = 'abc';
-  //   print('Login Successful');
-  //   isLogin = true;
-  // }
-
-  // print('successful');
-
-  // islogin=HttpHeaders.generalHeadersi
-  // if
-  // islogin=true
-  // while(islogin)
+  } while (attemps < maxAttemps);
 }

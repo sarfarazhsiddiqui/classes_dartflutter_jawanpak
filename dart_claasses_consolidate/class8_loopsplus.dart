@@ -163,9 +163,51 @@ void main() {
 
   // user login task
 // do while loop
-  int i = 1;
-  do {
-    print('Bismillah');
-    i++;
-  } while (i < 6);
+//   int i = 1;
+//   do {
+//     print('Bismillah');
+//     i++;
+//   } while (i < 6);
+// }
+  List<String> stdNames = ["Hamza", "Ali", "Bilal", "Shoaib", "Owais"];
+  List<Map> stdData = [
+    {
+      "studentName": "Hamza",
+      "class": "9th",
+      "subjectMark": [33, 3, 55, 33, 44],
+      "subjectName": ["Maths", "Urdu", 'English', "Chemistry", "Physics"]
+    },
+    {
+      "studentName": "ali",
+      "class": "9th",
+      "subjectMark": [33, 3, 55, 33, 44],
+      "subjectName": ["Maths", "Urdu", 'English', "Chemistry", "Physics"]
+    },
+    {
+      "studentName": "bilal",
+      "class": "9th",
+      "subjectMark": [33, 3, 95, 33, 44],
+      "subjectName": ["Maths", "Urdu", 'English', "Chemistry", "Physics"]
+    },
+    {
+      "studentName": "abdullah",
+      "class": "9th",
+      "subjectMark": [65, 3, 85, 33, 44],
+      "subjectName": ["Maths", "Urdu", 'English', "Chemistry", "Physics"]
+    },
+  ];
+  for (var i = 0; i < stdNames.length; i++) {
+    print("this is list ${stdNames[i]}");
+  }
+  for (var std in stdData) {
+    print("=======================");
+    print("Name is ${std["studentName"]}");
+    num obtainedMark = 0;
+    for (var i = 0; i < std["subjectName"].length; i++) {
+      print("${std["subjectName"][i]} Mark =${std["subjectMark"][i]}  ");
+      obtainedMark = obtainedMark + std["subjectMark"][i];
+    }
+    print("obtain mark = $obtainedMark");
+    print("=         =");
+  }
 }
