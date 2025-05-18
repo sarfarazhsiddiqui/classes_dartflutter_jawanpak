@@ -65,4 +65,51 @@ void main() {
   }
 
   print((news: 'abcc', id: '154', date: '23/01/2025'));
+
+// 18/05/2025 -- class 10
+
+// optional named parameters
+
+  booksInfo({String? bookName, String? publisher}) {
+    print(bookName);
+    print(publisher);
+  }
+
+  booksInfo(bookName: 'Command Dart', publisher: 'Dr. jaim');
+  //print(booksInfo());
+  //print(booksInfo());
+
+  medicalInfo({required String medicineName, required int sellPrice}) {
+    print(medicineName);
+    print(sellPrice);
+  }
+
+  medicalInfo(medicineName: 'Postan', sellPrice: 15);
+
+  //medicalInfo(medicineName: 'Postan plus', sellPrice: 150);
+
+  void greet(String name, {String greeting = 'Hello'}) {
+    print('$greeting $name!');
+  }
+
+  greet('sarfaraz');
+
+  void Function(String, {String greeting}) g = greet;
+  g('Dash', greeting: 'Howdy');
+
+  // Anonymus Functions -- without functions name
+
+  const list = ['apple', 'mangoes'];
+
+  var myList = list.map((items) {
+    return items.toUpperCase();
+  }).toList();
+
+  for (var items in myList) {
+    print('$items');
+  }
+
+  var myNewList = list.map((item) => item.toUpperCase()).toList();
+
+  myNewList.forEach((item) => print('$item'));
 }
