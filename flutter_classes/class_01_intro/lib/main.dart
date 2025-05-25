@@ -19,34 +19,44 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: Row(
+        body: Column(
           children: [
             SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-            ),
-              width: 100,
-              height: 100,
-              color: Colors.brown,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.blueGrey,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.deepPurple,
-            ),
-            Container(
-              width: 300,
-              height: 100,
-              color: Colors.greenAccent,
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.brown,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.blueGrey,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.amber,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.deepPurple,
+                  ),
+                  Container(
+                    width: 300,
+                    height: 100,
+                    color: Colors.greenAccent,
+                  ),
+                  Container(
+                    width: 300,
+                    height: 100,
+                    color: Colors.blueGrey,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
