@@ -1,0 +1,43 @@
+class Car {
+  String? company = "Honda"; // attribute  or properties
+  String? carmodel;
+
+  Car(String company) {
+    // constructor -- to define for multiples
+    // default constructor
+    // this.company is for parent attribute, company is for parameter
+    this.company = company;
+  }
+  // named constructor
+  Car.Honda(mmodel) {
+    //Civic model is of Honda company
+    carmodel = mmodel;
+    print('$carmodel is make by Honda');
+  }
+
+  Car.Toyota() {}
+
+  model() {
+    // methods
+    print('$company is making multiple car models');
+  }
+}
+
+void main() {
+  // for dafault constructor
+  Car newCar1 = Car('Honda');
+  newCar1.model();
+  Car newCar2 = Car('Toyota');
+  newCar2.model();
+  // for named constructor
+  // Car newCar3 = Car.isHonda();
+  Car newCar4 = Car.Honda('Civic');
+}
+
+// class device
+// class form
+// class person
+// class computer / product
+
+
+//sdf
