@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-Widget CustomChatTile(newImage, newColor, newTitle, newMessage) {
+//Widget CustomChatTile(newImage, newColor, newTitle, newMessage) {
+Widget CustomChatTile(newImage, newColor, newMessage) {
   return ListTile(
     leading: CircleAvatar(
       backgroundImage:
@@ -9,15 +10,15 @@ Widget CustomChatTile(newImage, newColor, newTitle, newMessage) {
           AssetImage('assets/images/$newImage'),
       backgroundColor: newColor,
     ),
-    title: Row(
-      children: [
-        Text(
-          '$newTitle',
-          style: TextStyle(
-              fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
-      ],
-    ),
+    // title: Row(
+    //   children: [
+    //     Text(
+    //       '$newTitle',
+    //       style: TextStyle(
+    //           fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+    //     ),
+    //   ],
+    // ),
     subtitle: Row(
       children: [
         Icon(

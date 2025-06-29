@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/chat_view.dart';
 import 'package:flutter_basics/home_view.dart';
+import 'package:flutter_basics/login_view.dart';
 import 'package:flutter_basics/temp_view.dart';
 import 'package:flutter_basics/whatsapp_view.dart';
 
@@ -13,6 +14,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: WhatsAppView());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: LoginView());
   }
 }
