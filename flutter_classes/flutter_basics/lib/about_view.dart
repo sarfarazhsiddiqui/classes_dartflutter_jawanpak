@@ -9,8 +9,10 @@ class AboutView extends StatelessWidget {
       appBar: AppBar(
         title: Text('About View'),
       ),
-      body: AboutDialog(),
+      body: AlertDialog(
+        backgroundColor: Colors.amber,
+        title: Text('Alert'),
+      ),
     );
-    
   }
 }
