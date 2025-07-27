@@ -102,3 +102,4 @@ class _ContactViewState extends State<ContactView> {
     );
   }
 }
+
