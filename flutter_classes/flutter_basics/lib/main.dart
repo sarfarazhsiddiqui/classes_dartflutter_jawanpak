@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/chat_view.dart';
+import 'package:flutter_basics/dashboard_products.dart';
 import 'package:flutter_basics/firebase_options.dart';
 import 'package:flutter_basics/home_view.dart';
 import 'package:flutter_basics/login_view.dart';
@@ -19,8 +20,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: LoginView()
-        //PostView()
-        );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: DashboardProducts(), //LoginView()
+      //PostView()
+    );
   }
 }

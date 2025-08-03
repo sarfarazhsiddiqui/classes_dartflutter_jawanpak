@@ -1,18 +1,21 @@
-install nodejs
+1. install nodejs
+copy command from https://firebase.flutter.dev/docs/cli/ for pt.2 and 3
 to cmd
-run : npm install -g firebase-tools
-run : dart pub global activate flutterfire_cli
-copy path to env.
+2. run : npm install -g firebase-tools
+3. run : dart pub global activate flutterfire_cli
+4. copy path to env.
 to cmd
-create firebase project 
-flutter login 
-flutter config (to project file in visual code)
+5. create firebase project 
+6. firebase login from flutter project
+7. flutterfire config (to project file in visual code)
+8. flutter pub add firebase_core from pub.dev
+9. enable developer mode in system setting
+10. flutter pub add firebase_auth from pub.dev
+for authentication code copy from 
 //
-search flutter firebase login 
+11. search flutter firebase login 
 https://firebase.google.com/docs/auth/flutter/password-auth
 for authentication code
 //
-flutter pub add firebase_core from pub.dev
-flutter pub add firebase_auth from pub.dev
-flutter logout (cmd)
+12. flutter logout (cmd)
 
