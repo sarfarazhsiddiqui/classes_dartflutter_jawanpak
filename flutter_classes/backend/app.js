@@ -1,8 +1,11 @@
-const express = require("express");
+const express = require("express"); // import es5
+//const user = require("./models/users");
+const mongoose = require("mongoose");
+const User = require("./models/users");
 
 const app = express();
 app.use(express.json());
- app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 const users = [
   {
@@ -234,55 +237,78 @@ const users = [
       "catchPhrase": "Centralized empowering task-force",
       "bs": "target end-to-end models"
     }
-  }
-];
+  }];
+
+// connect to mongoDB
+mongoose.connect(
+  "mongodb+srv://dbUserSarfaraz:Sarfaraz0300@cluster0.ep3f9ef.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+)
+  .then(() => console.log("Connected to MongoDB!"))
+  .catch((err) => console.error(`Could not conntect to MongoDB ${err}`));
+
+app.post("/user", async (req, res) => {
+  const user = await User.create(req.body);
+  res.json(user);
+});
+
 
 //route
-app.get("/",(req,res) => {
-//    res.send("Hello");    
-    // res.json({
-    //     FIRSTNAME: "SARFARAZ",
-    // });
-        res.json({
+app.get("/", (req, res) => {
+  //    res.send("Hello");    
+  // res.json({
+  //     FIRSTNAME: "SARFARAZ",
+  // });
+  res.json({
 
-    });
+  });
 });
 
-app.get("/users",(req,res) => {
-        res.json({users});
+app.get("/users", (req, res) => {
+  res.json({ users });
 });
-app.get("/users/:id",(req,res) => {
-    const id = req.params.id;
-    const getSelectedUser = users.find((e) => e.id == id);
-        res.json(getSelectedUser);
-});
-
-app.post("/users",(req,res) => {
-    const body = req.body;
-    console.log(req);
-    users.push(body);
-        res.json(users);
+app.get("/users/:id", (req, res) => {
+  const id = req.params.id;
+  const getSelectedUser = users.find((e) => e.id == id);
+  res.json(getSelectedUser);
 });
 
+app.post("/users", (req, res) => {
+  const body = req.body;
+  console.log(req);
+  users.push(body);
+  res.json(users);
+});
+
+app.put("/users/:id", (req, res) => {
+  const id = req.params.id;
+  const body = req.body;
+  users.forEach((e) => {
+    if (e.id == id) {
+      e = body;
+    }
+  });
+  res.json(users);
+});
 
 //app.listen(999);
-app.listen(999,() => {
-    console.log(`Server is running on port ${999}`);
+app.listen(999, () => {
+  console.log(`Server is running on port ${999}`);
 });
 
 
 const ob = {
-        "name": "Abdul Rehman",
-        "username": "abdul.rehman",
-        "email": "abdulrehman@gmail.com",
-        "address": {
-            "street": "jahaz chowrangi",
-            "suite": "street 9",
-            "city": "Karachi",
-            "zipcode": "759850",
-            "geo": {
-                "lat": "-48.2386",
-                "lng": "59.2232"
-            }
-        }
-    };
+  "name": "Abdul Rehman",
+  "username": "abdul.rehman",
+  "email": "abdulrehman@gmail.com",
+  "address": {
+    "street": "jahaz chowrangi",
+    "suite": "street 9",
+    "city": "Karachi",
+    "zipcode": "759850",
+    "geo": {
+      "lat": "-48.2386",
+      "lng": "59.2232"
+    }
+  }
+};
+
